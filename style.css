@@ -106,8 +106,8 @@ body {
     /* padding-bottom: 1.5rem; */
 }
 
-.container div:last-child {
-    border-bottom: none;
+.container div:nth-last-child(3) {
+    border: none;
 }
 
 
