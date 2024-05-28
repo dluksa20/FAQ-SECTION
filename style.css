@@ -1,0 +1,153 @@
+@font-face {
+    font-family:'WorkSans';
+    font-display: swap;
+    font-weight: 400, 600, 700;
+    src: url('/assets/fonts/WorkSans-VariableFont_wght.ttf')
+        format('truetype')
+}
+
+
+:root {
+    --crl-100: hsl(0, 0%, 100%);
+    --clr-200: hsl(275, 100%, 97%);
+    --clr-300: hsl(292, 16%, 49%);
+    --clr-400: hsl(292, 42%, 14%); 
+    --clr-500: #AD28EB;
+
+    --ff-default: 'WorkSans', 'sans-serif';
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fs-default: 1rem;
+}
+
+.switch {
+    opacity: 1;
+    display: block;
+    transition:
+        opacity 1s,
+        display 1s allow-discrete;
+}
+
+
+/* RESET  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+    font-size: 2.563rem;
+    font-weight: var(--fw-bold);
+}
+
+h2 {
+    font-weight: var(--fw-bold);
+    margin-right: 2rem;
+}
+
+h2:hover {
+    color: var(--clr-500);
+}
+
+p {
+    color: var(--clr-300);
+    padding-bottom: 1.5rem;
+    font-weight: var(--fw-regular);
+}
+
+
+body {
+    font-size: var(--fs-default);
+    font-family: var(--ff-default);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url('/assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: var(--clr-200);
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--crl-100);
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qSection {
+    border-bottom: var(--clr-200) solid;
+    /* padding-bottom: 1.5rem; */
+}
+
+.container div:last-child {
+    border: none;
+}
+
+
+.qHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.qParagraph {
+    display: none;
+    opacity: 0;
+    transition:
+        opacity 1s,
+        display 1s allow-discrete;
+}
+
+@media (max-width:540px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+
+    }
+    img {
+        height: 32px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.825rem;
+    }
+
+
+    .container {
+        margin: 0rem 1rem;
+    }
+}
