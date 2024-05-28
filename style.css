@@ -107,7 +107,7 @@ body {
 }
 
 .container div:last-child {
-    border: none;
+    border-bottom: none;
 }
 
 
